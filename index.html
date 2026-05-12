@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /*Group selector*/
+        h1, h2, h3, h4{
+            background-color: pink;
+            font: 1em sans-serif;
+        }
+        /*Class selector*/
+        .section{
+            background-color: beige;
+        }
+
+        /*id selector*/
+        #header{
+            
+            font-family: 'Times New Roman', Times, serif;
+        }
+        /*Descendant selector*/
+        nav ul li a{
+            color: yellow;
+        }
+        /*Pseudo selector*/
+        .link:hover{
+            color: brown;
+        }
+        
+    </style>
+
+</head>
+<body>
+    <header id="#header">
+        <h1>Web Practical</h1>
+        <p>Welcome to my profile</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#about" class="link">About</a></li>
+            <li><a href="#skills" class="link">Skills</a></li>
+            <li><a href="#routine" class="link">Daily Routine</a></li>
+        </ul>
+    </nav>
+    <section class="section" id="about">
+        <h2>About me</h2>
+        <p style="font-size: 20pt;">My name is John. I am an ISM student at Ardhi University. I love coding and exploring</p>
+        <img src="img.jpeg" alt="Profile pictures" style="height: 300px; width: 300px;">
+    </section>
+    <section class="section" id="skills">
+        <h3>I have the following skills:</h3>
+        <ul>
+            <li>Programming</li>
+            <li>Mentoring & Coaching</li>
+            <li>Public Speaking</li>
+        </ul>
+    </section>
+    <section class="section" id="routine">
+        <h4>My daily Routine</h4>
+        <ol>
+        <li>Wake up</li>
+        <li>Exercise</li>
+        <li>Personal Hygiene</li>
+        <li>Prepare for class</li>
+        <li>Take breakfast</li>
+        <li>Go to class</li>
+        <li>Take lunch</li>
+        </ol>
+
+    </section>
+        
+</body>
+</html>
