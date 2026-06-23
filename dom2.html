@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grade Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+       document.addEventListener("DOMContentLoaded", function() {
+    const calcBtn = document.getElementById("calcBtn");
+    const scoreInput = document.getElementById("scoreInput");
+    const resultDiv = document.getElementById("result");
+
+    calcBtn.addEventListener("click", function(event) {
+        event.preventDefault();
+        calculateGrade();
+    });
+
+    function calculateGrade() {
+        let score = Number(scoreInput.value);
+
+        if (isNaN(score) || score < 0 || score > 100) {
+            resultDiv.textContent = "Please enter a valid score between 0 and 100.";
+            return;
+        }
+
+        let grade;
+
+        if (score >= 70) {
+            grade = "A";
+            description = "Excellent";
+        } else if (score >= 60) {
+            grade = "B";
+            description = "Very Good";
+        } else if (score >= 50) {
+            grade = "C";
+            description = "Good";
+        } else if (score >= 40) {
+            grade = "D";
+            description = "Pass";
+        } else {
+            grade = "F";
+            description = "Fail";
+        }
+
+        resultDiv.innerHTML = `Your score is: ${score}<br>Your grade is: ${grade}<br>Description: ${description}`;
+    }
+});
+    </script>
+</head>
+<body>
+    <h2>Student Grade Calculator</h2>
+    <form action = " ">
+        <input type = "number" id = "scoreInput" placeholder = "Enter your score"><br><br>
+        <button id="calcBtn">Calculate Grade</button>
+    </form>
+    <div id="result">
+
+    </div>
+</body>
+</html>
